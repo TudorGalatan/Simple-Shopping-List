@@ -1,8 +1,9 @@
 '''
 Description of the module:
     - it contains the definition of the class used to represent the
-      user interface MMM
+      user interface
 '''
+
 from Domain.Domain import ShoppingListItem
 
 
@@ -90,7 +91,7 @@ class UserInterface:
               already in the repository
         '''
         
-        itemName = input("Type the name of the item: ")
+        itemName = input("\nype the name of the item: ")
         itemQuantity = int(input("Type the quantity: "))
         
         item = ShoppingListItem(itemName, itemQuantity)
@@ -102,15 +103,15 @@ class UserInterface:
         
         '''
         Description:
-            - it prints the menu with available options on the screen
+            - it prints the menu with the available options on the screen
         Input:
             - none
         Output:
             - the menu is printed on the screen
         '''
         
-        print("\t\tMENU\n\n")
-        print("Choose one of the options below:\n")
+        print("\n\t\tMENU\n\n")
+        print("The available options are:\n")
         print("1. Print all the items.\n")
         print("2. Print all the cross-checked items.\n")
         print("3. Print all the un-cross-checked items.\n")
@@ -157,3 +158,6 @@ class UserInterface:
                 
             elif option == 7:
                 exit()
+                
+            else:
+                print("This is not a valid option.\n")
