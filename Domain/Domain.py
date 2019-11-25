@@ -1,8 +1,7 @@
 '''
-Description of the module:
-    - it contains the definition of the class used to represent a
+    This module contains the definition of the class used to represent a
     shopping list item and the operations that can be performed on
-    that item
+    that item.
 '''
 
 
@@ -10,115 +9,114 @@ Description of the module:
 class ShoppingListItem:
     
     '''
-    Description:
-        - it defines a shopping list item and the operations that
-          can be performed on it
+        This class defines a shopping list item and the operations that
+        can be performed on it.
     '''
     
     
-    def __init__ (self, itemName = None, quantity = 1, crossChecked = False):
+    def __init__ (self, itemName = None, itemQuantity = 1, itemCrossChecked = False):
         
         '''
-        Description:
-            - it initializes the shopping list item object
-        Input:
-            - "itemName", the name of the item
-            - "quantity", the quantity of the item (if not specified,
-              it is implicitly considered to be 1)
-            - "crossChecked":
-                - False, if the item was not cross-checked (default)
-                - True, otherwise
-        Output:
-            - the attributes of the class are initialized
+            This method initializes the shopping list item object with the
+            given or the implicit values.
+            Input Parameters:
+                - "itemName", the name of the item
+                - "quantity", the quantity of the item (if not specified,
+                  it is implicitly considered to be 1)
+                - "crossChecked":
+                    - False, if the item was not cross-checked (default)
+                    - True, otherwise
+            Output Parameters:
+                - none
         '''
         
         self.__itemName = itemName
-        self.__itemQuantity = quantity
-        self.__itemCrossChecked = crossChecked
+        self.__itemQuantity = itemQuantity
+        self.__itemCrossChecked = itemCrossChecked
         
         
     def __str__ (self):
         
         '''
-        Description:
-            - it defines the aspect of an object of the class as displayed on
-              the screen
-        Input:
-            - none
-        Output:
-            - 
+            This method defines the look of an object of the class as
+            displayed on the screen.
+            Input Parameters:
+                - none
+            Output Parameters:
+                - none
         '''
         
-        string = self.__itemName + ' ' + str(self.__itemQuantity)
+        lookString = self.__itemName + ' ' + str(self.__itemQuantity)
         
-        return string
+        return lookString
         
         
     def getItemName (self):
         
         '''
-        Description:
-            - it returns the item name
-        Input:
-            - none
-        Output:
-            - the item name
+            This method returns the item name.
+            Input Parameters:
+                - none
+            Output Parameters:
+                - "itemName", the item name
         '''
         
-        return self.__itemName
+        itemName = self.__itemName
+        
+        return itemName
     
     
     def getItemQuantity (self):
         
         '''
-        Description:
-            - it returns the item quantity
-        Input:
-            - none
-        Output:
-            - the item quantity
+            This method returns the item quantity.
+            Input Parameters:
+                - none
+            Output Parameters:
+                - "itemQuantity", the item quantity
         '''
         
-        return self.__itemQuantity
+        itemQuantity = self.__itemQuantity
+        
+        return itemQuantity
     
     
     def getItemCrossChecked (self):
         
         '''
-        Description:
-            - it returns the item cross-checked value
-        Input:
-            - none
-        Output:
-            - the item cross-checked value
+            This method returns the item's cross-checked value.
+            Input Parameters:
+                - none
+            Output Parameters:
+                - "itemCrossChecked", the item's cross-checked value
         '''
         
-        return self.__itemCrossChecked
+        itemCrossChecked = self.__itemCrossChecked
+        
+        return itemCrossChecked
     
     
-    def setItemQuantity (self, newQuantity):
+    def setItemQuantity (self, newItemQuantity):
         
         '''
-        Description:
-            - it changes the item quantity
-        Input:
-            - "newQuantity", the new quantity of the item
-        Output:
-            - the item quantity is changed
+            This method changes the item quantity.
+            Input Parameters:
+                - "newItemQuantity", the new quantity of the item
+            Output Parameters:
+                - none
         '''
         
-        self.__itemQuantity = newQuantity
+        self.__itemQuantity = newItemQuantity
         
         
-    def setItemCrossChecked (self, newCrossChecked):
+    def setItemCrossChecked (self, newItemCrossChecked):
         
         '''
-        Description:
-            - it changes the item cross-checked value
-        Input:
-            - "newCrossChecked", the new cross-checked value of the item
-        Output:
-            - the item cross-checked value is changed
+            This method changes the item's cross-checked value.
+            Input Parameters:
+                - "newItemCrossChecked", the new cross-checked value of the item
+            Output Parameters:
+                - none
         '''
         
-        self.__itemCrossChecked = newCrossChecked
+        self.__itemCrossChecked = newItemCrossChecked
