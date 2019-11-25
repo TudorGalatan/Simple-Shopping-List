@@ -90,7 +90,7 @@ class ShoppingListRepository:
         '''
         
         for position in range (0, self.getSizeOfList()):
-            if self.getItemOnPosition(position).getItemName() == item.getItemName() and self.getItemOnPosition(position).getItemCrossChecked() == False:
+            if self.__listOfItems[position].getItemName() == item and self.__listOfItems[position].getItemCrossChecked() == False:
                 return position
         
         return -1
@@ -137,5 +137,27 @@ class ShoppingListRepository:
         if position == -1:
             return False
         
-        self.getItemOnPosition(position).setItemCrossChecked(True)
+        self.__listOfItems[position].setItemCrossChecked(True)
         return True
+    
+    
+    def removeCrossCheckedItem (self, itemName):
+        
+        '''
+        Description:
+            - it removes the cross-checked item
+        Input:
+            - "item", the given item
+        Output:
+            - the given cross-checked item is removed from the list
+        '''
+        
+        position = self.itemExists(itemName)
+        
+        item = self.__listOfItems[position]
+        
+        if item.getItemCrossChecked() == True:
+            self.__listOfItems.remove(item)
+            return True
+        
+        return False

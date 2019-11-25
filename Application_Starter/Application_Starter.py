@@ -16,5 +16,5 @@ userInterface = UserInterface(controller)
 
 
 
-runTests()
+'''runTests()'''
 userInterface.runApplication()

@@ -91,12 +91,49 @@ class UserInterface:
               already in the repository
         '''
         
-        itemName = input("\nype the name of the item: ")
+        itemName = input("\nType the name of the item: ")
         itemQuantity = int(input("Type the quantity: "))
         
         item = ShoppingListItem(itemName, itemQuantity)
         
         self.__controller.addItem(item)
+        
+        
+    def crossCheck (self):
+        
+        '''
+        Description:
+            - it cross-checks the given item
+        Input:
+            - "item", the given item
+        Output:
+            - the given item is cross-checked on the list
+        '''
+        
+        item = input("\nType the name of the item: ")
+        
+        self.__controller.crossCheck(item)
+        
+        
+    def removeCrossCheckedItem (self):
+        
+        '''
+        Description:
+            - it removes the cross-checked item
+        Input:
+            - "item", the given item
+        Output:
+            - the given cross-checked item is removed from the list
+        '''
+        
+        item = input("\nType the name of the item: ")
+        
+        result = self.__controller.removeCrossCheckedItem(item)
+        
+        if result == True:
+            print("\nThe operation succeeded.\n")
+        else:
+            print("\nThe item was not cross-checked.\n")
         
         
     def printMenu (self):
@@ -151,10 +188,10 @@ class UserInterface:
                 self.addItem()
             
             elif option == 5:
-                pass
+                self.crossCheck()
             
             elif option == 6:
-                pass
+                self.removeCrossCheckedItem()
                 
             elif option == 7:
                 exit()

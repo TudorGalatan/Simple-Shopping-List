@@ -57,3 +57,31 @@ class Controller:
         '''
         
         return self.__repository.getListOfItems()
+    
+    
+    def crossCheck (self, item):
+        
+        '''
+        Description:
+            - it cross-checks the given item
+        Input:
+            - "item", the given item
+        Output:
+            - the given item is cross-checked on the list
+        '''
+        
+        self.__repository.crossCheck(item)
+        
+        
+    def removeCrossCheckedItem (self, item):
+        
+        '''
+        Description:
+            - it removes the cross-checked item
+        Input:
+            - "item", the given item
+        Output:
+            - the given cross-checked item is removed from the list
+        '''
+        
+        return self.__repository.removeCrossCheckedItem(item)
