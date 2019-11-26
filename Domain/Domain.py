@@ -43,7 +43,8 @@ class ShoppingListItem:
             Input Parameters:
                 - none
             Output Parameters:
-                - none
+                - "lookString", the string that defines the look of an
+                  object on the screen
         '''
         
         lookString = self.__itemName + ' ' + str(self.__itemQuantity)
