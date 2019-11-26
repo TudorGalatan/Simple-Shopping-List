@@ -115,7 +115,7 @@ class ShoppingListRepository:
             self.__listOfItems.append(newItem)
             
         elif self.getItemOnPosition(positionOfItem).getItemCrossChecked() == True:
-            self.__listOfItems[positionOfItem].setItemCrossChecked() = False
+            self.__listOfItems[positionOfItem].setItemCrossChecked(False)
             
         else:
             itemQuantity = self.getItemOnPosition(positionOfItem).getItemQuantity()
