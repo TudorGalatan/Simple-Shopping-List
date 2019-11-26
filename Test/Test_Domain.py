@@ -1,6 +1,5 @@
 '''
-Description of the module:
-    - it contains all the code used for testing the functionalities from the domain
+    This module contains all the code used for testing the functionalities from the domain.
 '''
 
 from Domain.Domain import ShoppingListItem
@@ -10,20 +9,18 @@ from Domain.Domain import ShoppingListItem
 class TestDomain:
     
     '''
-    Description:
-        - it defines all the tests for the class "ShoppingListItem"
+        This class defines all the tests for the class "ShoppingListItem".
     '''
 
 
     def __init__ (self):
         
         '''
-        Description:
-            - it initializes the list with some data
-        Input:
-            - none
-        Output:
-            - the attributes of the class are initialized
+            This method initializes the class with some data.
+            Input Parameters:
+                - none
+            Output Parameters:
+                - none
         '''
         
         self.__item_1 = ShoppingListItem("bread", 2)
@@ -34,13 +31,11 @@ class TestDomain:
     def test_getItemName (self):
         
         '''
-        Description:
-            - it tests the "getItemName" method inside the class "ShoppingListItem"
-        Input:
-            - none
-        Output:
-            - true, if all the tests pass (the method works correctly)
-            - false, otherwise
+            This method tests the "getItemName" method inside the class "ShoppingListItem".
+            Input Parameters:
+                - none
+            Output Parameters:
+                - none
         '''
         
         assert self.__item_1.getItemName() == "bread"
@@ -51,13 +46,11 @@ class TestDomain:
     def test_getItemQuantity (self):
         
         '''
-        Description:
-            - it tests the "getItemQuantity" method inside the class "ShoppingListItem"
-        Input:
-            - none
-        Output:
-            - true, if all the tests pass (the method works correctly)
-            - false, otherwise
+            This method tests the "getItemQuantity" method inside the class "ShoppingListItem".
+            Input Parameters:
+                - none
+            Output Parameters:
+                - none
         '''
         
         assert self.__item_1.getItemQuantity() == 2
@@ -68,13 +61,11 @@ class TestDomain:
     def test_getItemCrossChecked (self):
         
         '''
-        Description:
-            - it tests the "getItemCrossChecked" method inside the class "ShoppingListItem"
-        Input:
-            - none
-        Output:
-            - true, if all the tests pass (the method works correctly)
-            - false, otherwise
+            This method tests the "getItemCrossChecked" method inside the class "ShoppingListItem".
+            Input Parameters:
+                - none
+            Output Parameters:
+                - none
         '''
         
         assert self.__item_1.getItemCrossChecked() == False
@@ -85,13 +76,11 @@ class TestDomain:
     def test_setItemQuantity (self):
         
         '''
-        Description:
-            - it tests the "setItemQuantity" method inside the class "ShoppingListItem"
-        Input:
-            - none
-        Output:
-            - true, if all the tests pass (the method works correctly)
-            - false, otherwise
+            This method tests the "setItemQuantity" method inside the class "ShoppingListItem".
+            Input Parameters:
+                - none
+            Output Parameters:
+                - none
         '''
         
         self.__item_1.setItemQuantity(5)
@@ -106,13 +95,11 @@ class TestDomain:
     def test_setItemCrossChecked (self):
         
         '''
-        Description:
-            - it tests the "setItemCrossChecked" method inside the class "ShoppingListItem"
-        Input:
-            - none
-        Output:
-            - true, if all the tests pass (the method works correctly)
-            - false, otherwise
+            This method tests the "setItemCrossChecked" method inside the class "ShoppingListItem".
+            Input Parameters:
+                - none
+            Output Parameters:
+                - none
         '''
         
         self.__item_1.setItemCrossChecked(True)
@@ -127,13 +114,11 @@ class TestDomain:
     def runDomainTests (self):
         
         '''
-        Description:
-            - it runs all the domain-related tests
-        Input:
-            - none
-        Output:
-            - true, if all the tests pass (all the functionalities work correctly)
-            - false, otherwise
+            This method runs all the domain-related tests.
+            Input Parameters:
+                - none
+            Output Parameters:
+                - none
         '''
         
         self.test_getItemName()
